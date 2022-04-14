@@ -32,7 +32,7 @@ function AboutUs() {
         </Text>
         <Text color={'gray.500'} maxW={'3xl'} fontSize={'xl'}>
           {' '}
-          Our initiative “Open minds” seeks to free our thoughs from internal
+          Our initiative “Open minds” seeks to free our thoughts from internal
           cages. To achieve this, we provide a platform that removes barriers to
           new inpiration discovery. A platform in which journal lovers can share
           their next best inspiration, all while in the comfort of their home.

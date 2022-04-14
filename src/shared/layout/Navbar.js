@@ -73,7 +73,8 @@ export default function WithSubnavigation() {
         >
           <ColorModeSwitcher justifySelf="flex-end" />
           <Button
-            as={'a'}
+            as={RouterLink}
+            to={'/login'}
             fontSize={'sm'}
             fontWeight={400}
             variant={'link'}
@@ -82,6 +83,8 @@ export default function WithSubnavigation() {
             Log In
           </Button>
           <Button
+            as={RouterLink}
+            to={'/register'}
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}

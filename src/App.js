@@ -7,6 +7,8 @@ import AboutUs from './home/AboutUs';
 // import Posts from './inspiration/Posts';
 import Footer from './shared/layout/Footer';
 // import PostDetails from './inspiration/PostDetails';
+import Register from './shared/auth/Register';
+import Login from './shared/auth/Login';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             element={<PostDetails />}
           /> */}
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </Flex>
