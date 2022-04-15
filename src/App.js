@@ -3,6 +3,7 @@ import { ChakraProvider, theme, Flex } from '@chakra-ui/react';
 import Navbar from './shared/layout/Navbar';
 import Home from './home/Home';
 import Inspiration from './inspiration/Inspiration';
+import Documentation from './home/Documentation';
 import AboutUs from './home/AboutUs';
 // import Posts from './inspiration/Posts';
 import Footer from './shared/layout/Footer';
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/inspiration" element={<Inspiration />} />
+          <Route path="/documentation" element={<Documentation />} />
           {/* <Route path="/posts" element={<Posts />} /> */}
           {/* <Route
             path="/authors/:authorId/posts/:id"

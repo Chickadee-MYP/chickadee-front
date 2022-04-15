@@ -27,7 +27,7 @@ function AboutUs() {
           </Text>
         </Heading>
         <Text color={'gray.500'} maxW={'3xl'} fontSize={'xl'}>
-          Chickadee-MYP is the result of a collaborative effort among four
+          Chickadee-MYP is the result of a collaborative effort among three
           aspiring developers.
         </Text>
         <Text color={'gray.500'} maxW={'3xl'} fontSize={'xl'}>
