@@ -40,7 +40,7 @@ function Inspiration() {
       // const response = await fetch(`/api/v1/posts?${searchParams.toString()}`);
       const response = await fetch(`/api/v1/posts`);
       const responseJSON = await response.json();
-      setPosts(responseJSON.posts);
+      setPosts(responseJSON);
       setIsLoadedState(true);
       // setPostsCount(responseJSON.pagination.total_count);
     } catch (err) {
