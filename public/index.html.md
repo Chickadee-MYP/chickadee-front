@@ -1,9 +1,22 @@
 
-# MYP-Chickadee
+# Chickadee-MYP
 
 
 
 <!--- If we have only one group/collection, then no need for the "ungrouped" heading -->
+
+## Introduction
+
+
+
+```
+The Chickadee-MYP is a micro-journaling API. It is a collection of all the CRUD methods needed to run a successful micro-journal web app. The nested models enable a user to get/put/post/delete posts and comments. The CRUD routes also allow the developer to enable the same for Users.
+
+A user may register and login. A user must login before accessing the API to ensure authentication.
+
+Our API has a like feature which works perfectly with posts and comments both. 
+
+```
 
 
 
