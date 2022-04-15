@@ -1,9 +1,9 @@
-import { Flex, Box, Image, useColorModeValue, Link } from '@chakra-ui/react';
+import { Flex, Box, useColorModeValue, Link } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
-function Animal({ pet }) {
+function Post({ post }) {
   return (
-    <Link as={RouterLink} to={`/findafriend/${pet.id}`}>
+    <Link as={RouterLink} to={`/inspiration/${post.id}`}>
       <Flex p={50} w="full" alignItems="center" justifyContent="center">
         <Box
           bg={useColorModeValue('white', 'gray.800')}
@@ -13,17 +13,6 @@ function Animal({ pet }) {
           shadow="lg"
           position="relative"
         >
-          <Image
-            src={
-              pet.primary_photo_cropped?.medium
-                ? pet.primary_photo_cropped.medium
-                : '/images/dog-placeholder.png'
-            }
-            boxSize="350px"
-            objectFit="contain"
-            alt={`Picture of ${pet.name}`}
-            roundedTop="lg"
-          />
           <Box p="6">
             <Flex mt="1" justifyContent="space-between" alignContent="center">
               <Box
@@ -33,18 +22,9 @@ function Animal({ pet }) {
                 lineHeight="tight"
                 isTruncated
               >
-                {pet.name}
+                {post.content}
               </Box>
             </Flex>
-            <Box
-              fontSize="sm"
-              fontWeight="normal"
-              as="h4"
-              lineHeight="tight"
-              isTruncated
-            >
-              {`${pet.breeds?.primary}`}
-            </Box>
           </Box>
         </Box>
       </Flex>
@@ -52,4 +32,4 @@ function Animal({ pet }) {
   );
 }
 
-export default Animal;
+export default Post;

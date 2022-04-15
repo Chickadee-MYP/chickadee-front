@@ -1,22 +1,20 @@
 
-# Chickadee-MYP
+# Chickadee-MYP_Prod
 
 
 
 <!--- If we have only one group/collection, then no need for the "ungrouped" heading -->
-
 ## Introduction
 
 
 
-```
+
 The Chickadee-MYP is a micro-journaling API. It is a collection of all the CRUD methods needed to run a successful micro-journal web app. The nested models enable a user to get/put/post/delete posts and comments. The CRUD routes also allow the developer to enable the same for Users.
 
 A user may register and login. A user must login before accessing the API to ensure authentication.
 
 Our API has a like feature which works perfectly with posts and comments both. 
 
-```
 
 
 
@@ -68,7 +66,7 @@ Our API has a like feature which works perfectly with posts and comments both.
 ```bash
 Method: POST
 Type: RAW
-URL: http://localhost:3500/auth/register
+URL: https://chickadee-myp-api.herokuapp.com/auth/register
 ```
 
 
@@ -96,7 +94,7 @@ URL: http://localhost:3500/auth/register
 ```bash
 Method: POST
 Type: RAW
-URL: http://localhost:3500/auth/login
+URL: https://chickadee-myp-api.herokuapp.com/auth/login
 ```
 
 
@@ -105,8 +103,8 @@ URL: http://localhost:3500/auth/login
 
 ```js        
 {
-    "username" : "Anoushka",
-    "password" : "test"
+    "username" : "mark",
+    "password" : "password"
 }
 ```
 
@@ -125,7 +123,7 @@ URL: http://localhost:3500/auth/login
 ```bash
 Method: GET
 Type: 
-URL: http://localhost:3500/api/v1/posts/1/comments
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/posts/1/comments
 ```
 
 
@@ -139,7 +137,7 @@ URL: http://localhost:3500/api/v1/posts/1/comments
 ```bash
 Method: GET
 Type: 
-URL: http://localhost:3500/api/v1/authors/1/posts/1/comments/2
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/1/posts/1/comments/2
 ```
 
 
@@ -153,7 +151,7 @@ URL: http://localhost:3500/api/v1/authors/1/posts/1/comments/2
 ```bash
 Method: POST
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/3/posts/26/comments
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/3/posts/26/comments
 ```
 
 
@@ -163,7 +161,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts/26/comments
 ```js        
 {
         "content": "Oh NO!!",
-        "authorId": 5,
+        "userId": 5,
         "postId": 26
 }
 ```
@@ -179,7 +177,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts/26/comments
 ```bash
 Method: PUT
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/3/posts/2/Comments/4
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/3/posts/2/Comments/4
 ```
 
 
@@ -203,17 +201,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts/2/Comments/4
 ```bash
 Method: DELETE
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/3/posts/26/comments/12
-```
-
-
-
-***Body:***
-
-```js        
-{
-         "content": "I know they say that money talks, but all mine says is 'Goodbye'."
-}
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/3/posts/26/comments/12
 ```
 
 
@@ -231,7 +219,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts/26/comments/12
 ```bash
 Method: GET
 Type: 
-URL: http://localhost:3500/api/v1/authors/1/posts/8/comments/10/likes
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/1/posts/8/comments/10/likes
 ```
 
 
@@ -245,7 +233,7 @@ URL: http://localhost:3500/api/v1/authors/1/posts/8/comments/10/likes
 ```bash
 Method: GET
 Type: 
-URL: http://localhost:3500/api/v1/authors/3/posts/1/likes
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/3/posts/1/likes
 ```
 
 
@@ -259,7 +247,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts/1/likes
 ```bash
 Method: POST
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/2/posts/23/likes
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/2/posts/23/likes
 ```
 
 
@@ -270,7 +258,7 @@ URL: http://localhost:3500/api/v1/authors/2/posts/23/likes
 {
         "likableId": 23,
         "likableType": "post",
-        "authorId": 3
+        "userId": 3
 }
 ```
 
@@ -285,7 +273,7 @@ URL: http://localhost:3500/api/v1/authors/2/posts/23/likes
 ```bash
 Method: POST
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/2/posts/23/comments/8/likes
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/2/posts/23/comments/8/likes
 ```
 
 
@@ -296,7 +284,7 @@ URL: http://localhost:3500/api/v1/authors/2/posts/23/comments/8/likes
 {
         "likableId": 8,
         "likableType": "comment",
-        "authorId": 3
+        "userId": 3
 }
 ```
 
@@ -311,17 +299,7 @@ URL: http://localhost:3500/api/v1/authors/2/posts/23/comments/8/likes
 ```bash
 Method: DELETE
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/3/posts/20/likes/1
-```
-
-
-
-***Body:***
-
-```js        
-{
-         "content": "I know they say that money talks, but all mine says is 'Goodbye'."
-}
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/3/posts/20/likes/1
 ```
 
 
@@ -339,7 +317,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts/20/likes/1
 ```bash
 Method: GET
 Type: 
-URL: http://localhost:3500/api/v1/posts
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/posts
 ```
 
 
@@ -353,7 +331,7 @@ URL: http://localhost:3500/api/v1/posts
 ```bash
 Method: GET
 Type: 
-URL: http://localhost:3500/api/v1/authors/1/posts/
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/1/posts/
 ```
 
 
@@ -367,7 +345,7 @@ URL: http://localhost:3500/api/v1/authors/1/posts/
 ```bash
 Method: GET
 Type: 
-URL: http://localhost:3500/api/v1/authors/1/posts/8
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/1/posts/8
 ```
 
 
@@ -381,7 +359,7 @@ URL: http://localhost:3500/api/v1/authors/1/posts/8
 ```bash
 Method: POST
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/3/posts
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/3/posts
 ```
 
 
@@ -391,7 +369,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts
 ```js        
 {
         "content": "Barcelona is out the Champion's League",
-        "authorId": 3
+        "userId": 3
 }
 ```
 
@@ -406,7 +384,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts
 ```bash
 Method: PUT
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/3/posts/22
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/3/posts/22
 ```
 
 
@@ -430,17 +408,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts/22
 ```bash
 Method: DELETE
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/3/posts/25
-```
-
-
-
-***Body:***
-
-```js        
-{
-         "content": "I know they say that money talks, but all mine says is 'Goodbye'."
-}
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/3/posts/25
 ```
 
 
@@ -458,7 +426,7 @@ URL: http://localhost:3500/api/v1/authors/3/posts/25
 ```bash
 Method: GET
 Type: 
-URL: http://localhost:3500/api/v1/authors
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users
 ```
 
 
@@ -472,7 +440,7 @@ URL: http://localhost:3500/api/v1/authors
 ```bash
 Method: GET
 Type: 
-URL: http://localhost:3500/api/v1/authors/3
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/3
 ```
 
 
@@ -486,7 +454,7 @@ URL: http://localhost:3500/api/v1/authors/3
 ```bash
 Method: POST
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/
 ```
 
 
@@ -514,7 +482,7 @@ URL: http://localhost:3500/api/v1/authors/
 ```bash
 Method: PUT
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/6
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/6
 ```
 
 
@@ -538,22 +506,12 @@ URL: http://localhost:3500/api/v1/authors/6
 ```bash
 Method: DELETE
 Type: RAW
-URL: http://localhost:3500/api/v1/authors/7
-```
-
-
-
-***Body:***
-
-```js        
-{
-    "suffix": "Jr."
-}
+URL: https://chickadee-myp-api.herokuapp.com/api/v1/users/7
 ```
 
 
 
 ---
-[Back to top](#myp-chickadee)
+[Back to top](#chickadee-myp_prod)
 
->Generated at 2022-04-15 04:51:58 by [docgen](https://github.com/thedevsaddam/docgen)
+>Generated at 2022-04-15 11:19:04 by [docgen](https://github.com/thedevsaddam/docgen)
